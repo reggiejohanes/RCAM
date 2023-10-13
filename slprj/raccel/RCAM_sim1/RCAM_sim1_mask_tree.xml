@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/SlsaMaskTree/R2020a">
+  <slsa.mm.maskTree.MaskTree type="slsa.mm.maskTree.MaskTree" uuid="061cf90d-93ee-4e14-8d3e-fa2d83f61261">
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="4c29255d-8079-408a-9459-c0cfc9c7196d">
+      <blockPath>RCAM_sim1/RCAM/Aerodynamics/YAxisTransform/Create 3x3 Matrix</blockPath>
+      <id>RCAM_sim1:213</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="e5a7a658-5903-4b67-ab8d-65bc9502f7dc">
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="2e3c44e8-099f-4144-8bc9-c100cd72bfb0">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/Atmosphere</blockPath>
+      <id>RCAM_sim1:37</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="2ec4804d-dd89-4f22-8717-8beb3ab153ba">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6e61ea38-1bd5-42a2-a496-f793080c8d63">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>custom</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="28cbe55e-b69d-4c93-aedc-cc13b59a509e">
+          <evaluate>true</evaluate>
+          <expression>9.80665</expression>
+          <isTunable>true</isTunable>
+          <name>g</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2b6dd371-caac-450f-9cf3-595e523ad05e">
+          <evaluate>true</evaluate>
+          <expression>1.4</expression>
+          <isTunable>true</isTunable>
+          <name>gamma</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f2ac21f0-e400-4217-8919-e340365f12ea">
+          <evaluate>true</evaluate>
+          <expression>287.0531</expression>
+          <isTunable>true</isTunable>
+          <name>R</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="424b02cb-a478-47e6-815f-cd6502eed776">
+          <evaluate>true</evaluate>
+          <expression>0.0065</expression>
+          <isTunable>true</isTunable>
+          <name>L</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="382cbd6b-e505-48d0-b86d-dcb7ecaa70bc">
+          <evaluate>true</evaluate>
+          <expression>11000</expression>
+          <isTunable>true</isTunable>
+          <name>h_trop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="01603ea9-3373-4790-8543-4361409cf4d6">
+          <evaluate>true</evaluate>
+          <expression>20000</expression>
+          <isTunable>true</isTunable>
+          <name>h_strat</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0d4d8a02-db2c-4410-b5d7-5fd8424dd285">
+          <evaluate>true</evaluate>
+          <expression>1.225</expression>
+          <isTunable>true</isTunable>
+          <name>rho0</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f1c0ff60-e738-4c57-8517-158ee1614796">
+          <evaluate>true</evaluate>
+          <expression>101325</expression>
+          <isTunable>true</isTunable>
+          <name>P0</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="bd4ca8d3-56ac-445b-ac13-9596879d0cb2">
+          <evaluate>true</evaluate>
+          <expression>288.15</expression>
+          <isTunable>true</isTunable>
+          <name>T0</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5f72a66c-20e4-4d14-b365-92ad3bfa18e4">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>h0</name>
+        </dialogParameters>
+        <initializationCode>ports = aeroicon(&apos;aeroblkisa&apos;,&apos;icon&apos;);
+</initializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="7885bcb7-7983-481e-b5f9-57e70731b262">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)</blockPath>
+      <childrenIds>RCAM_sim1:38:82</childrenIds>
+      <childrenIds>RCAM_sim1:38:87</childrenIds>
+      <childrenIds>RCAM_sim1:38:89</childrenIds>
+      <childrenIds>RCAM_sim1:38:90</childrenIds>
+      <id>RCAM_sim1:38</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="c56c3e68-62f5-4b72-8eaf-82509a345505">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="70378f0c-ffed-4c33-8221-d6fa59b7fe27">
+          <expression>Metric (MKS)</expression>
+          <name>units</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1fc0e1c5-f3b8-48cb-9d27-e82ada96ecfd">
+          <expression>Fixed</expression>
+          <name>mtype</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6fc362b0-8a46-4734-bbb6-b014649fbbec">
+          <expression>Euler Angles</expression>
+          <name>rep</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2717be13-d3c8-4402-b8dd-d346fc271fd9">
+          <evaluate>true</evaluate>
+          <expression>Xe0</expression>
+          <isTunable>true</isTunable>
+          <name>xme_0</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="5b2f8201-60c9-4436-9d80-39a03caedd49">
+            <name>Xe0</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="99e41df9-bb98-4b06-b59f-74c75691bce6">
+          <evaluate>true</evaluate>
+          <expression>Vb0</expression>
+          <isTunable>true</isTunable>
+          <name>Vm_0</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="8fca88c3-ecdd-4a57-877e-4438124f9417">
+            <name>Vb0</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="375a45f0-0f6c-4dee-8289-ac13c88c7537">
+          <evaluate>true</evaluate>
+          <expression>euler0</expression>
+          <isTunable>true</isTunable>
+          <name>eul_0</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="a007e59b-295a-4bcd-909e-76eef3ba6610">
+            <name>euler0</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c81ffaae-d372-4597-ad53-0fb2e4f93a82">
+          <evaluate>true</evaluate>
+          <expression>pqr0</expression>
+          <isTunable>true</isTunable>
+          <name>pm_0</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="951a5830-7404-4bf8-8f8e-4c5cf05b0c6e">
+            <name>pqr0</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9ee5a5e5-c28b-4b9a-af5a-1b7e7651fdf4">
+          <evaluate>true</evaluate>
+          <expression>m</expression>
+          <isTunable>true</isTunable>
+          <name>mass_0</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="947f45ab-3dc2-46f9-a988-17141770f3f3">
+            <name>m</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b874e8ad-b459-4327-b60c-3ee291acebd5">
+          <evaluate>true</evaluate>
+          <expression>0.5</expression>
+          <isTunable>true</isTunable>
+          <name>mass_e</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="954a1d89-a91a-4e00-a988-4de8445ea7dc">
+          <evaluate>true</evaluate>
+          <expression>2.0</expression>
+          <isTunable>true</isTunable>
+          <name>mass_f</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ff170f6b-aa5c-4b0c-8e73-3792d53a7f6b">
+          <evaluate>true</evaluate>
+          <expression>Ib</expression>
+          <isTunable>true</isTunable>
+          <name>inertia</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="c2800bf5-b948-490c-918b-4a406fc5f95d">
+            <name>Ib</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="fb32f633-bb7f-420b-ab4f-3455ba057bb0">
+          <evaluate>true</evaluate>
+          <expression>eye(3)</expression>
+          <isTunable>true</isTunable>
+          <name>inertia_e</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b0d2463e-17e0-4471-9b79-6e37459836ae">
+          <evaluate>true</evaluate>
+          <expression>2*eye(3)</expression>
+          <isTunable>true</isTunable>
+          <name>inertia_f</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="be29eddf-22db-4481-ac6a-cc0644e571ba">
+          <evaluate>true</evaluate>
+          <expression>1.0</expression>
+          <isTunable>true</isTunable>
+          <name>k_quat</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="41a7adbb-2191-411f-844f-406452f3a1d2">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>vre_flag</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="07a13a52-1683-4c22-8ec1-0a2f6548f723">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>abi_flag</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6ff9a15f-5861-4328-bf88-cbc142b4cb4e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>aMode</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a9c28e5f-2ae2-499d-9c2e-f6e4df105c21">
+          <evaluate>true</evaluate>
+          <expression>&apos;&apos;</expression>
+          <name>xme_statename</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f4983397-18e5-49aa-831a-ef1fff56cf2b">
+          <evaluate>true</evaluate>
+          <expression>&apos;&apos;</expression>
+          <name>Vm_statename</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="46627993-6a9e-474a-9be2-f285888796e7">
+          <evaluate>true</evaluate>
+          <expression>&apos;&apos;</expression>
+          <name>eul_statename</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="34b4ff88-b801-47a4-ad78-75427f688a5d">
+          <evaluate>true</evaluate>
+          <expression>&apos;&apos;</expression>
+          <name>quat_statename</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="31909808-d9f3-46c2-ba67-f5ed08ba79e1">
+          <evaluate>true</evaluate>
+          <expression>&apos;&apos;</expression>
+          <name>pm_statename</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1e3fe481-9188-4032-ad04-8a9b92e49e38">
+          <evaluate>true</evaluate>
+          <expression>&apos;&apos;</expression>
+          <name>mass_statename</name>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    ports=aerosharedicon(&apos;shared6dofbody&apos;,&apos;icon&apos;);
+else
+    ports=sharedautoicon(&apos;shared6dofbody&apos;,&apos;icon&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="e8e8ec99-82a5-433c-afdf-37f4a976ec75">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Determine Force,  Mass &amp; Inertia</blockPath>
+      <id>RCAM_sim1:38:82</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="ecbc17cb-716e-4b0a-bb0d-df1062bc9ef0">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="22ac6a29-a877-4875-a1ce-c67d157fea81">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="5c127fef-848d-4160-9765-0aa17c79ed4f">
+            <name>aMode</name>
+            <value></value>
+            <workspace>RCAM_sim1:38</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="8894e3d1-0dcb-4d13-b539-5715f76630ff">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Vbxw</blockPath>
+      <id>RCAM_sim1:38:87</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="6ee09d42-fe22-41be-afe5-b3fa96bc4dee">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f26218de-53ca-4f3d-92bf-75fc81116e7a">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="32b30ff8-5763-4b03-a562-5c8989f99d6f">
+            <name>aMode</name>
+            <value></value>
+            <workspace>RCAM_sim1:38</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="8db398b1-6df6-4b4f-81c9-e54abdb60c38">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Calculate DCM &amp; Euler Angles</blockPath>
+      <childrenIds>RCAM_sim1:38:89:357</childrenIds>
+      <id>RCAM_sim1:38:89</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="826d80b0-3219-4600-a98d-88703e89e28c">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d6bcf70f-f99a-4706-99be-191dd9af55b6">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="7e909a7e-004c-4ca5-bd90-68540757d3e8">
+            <name>aMode</name>
+            <value></value>
+            <workspace>RCAM_sim1:38</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="f997cff3-774c-4f74-8919-c683fd9dfdf5">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Calculate DCM &amp; Euler Angles/Rotation Angles to Direction Cosine Matrix</blockPath>
+      <childrenIds>RCAM_sim1:38:89:357:57</childrenIds>
+      <id>RCAM_sim1:38:89:357</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="74f5866a-4459-42a2-92e1-22f99e24ea51">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="8e00fd6b-65b2-464f-9f25-ab54919a2821">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>rotationOrder</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="974d363c-f6ab-45a4-86c5-307f5c58a20d">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="8e93441b-3902-43ba-b7f4-088309737bd0">
+            <name>aMode</name>
+            <value></value>
+            <workspace>RCAM_sim1:38:89</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    ports=aerosharedicon(&apos;sharedang2dcm&apos;);
+else
+    ports=sharedautoicon(&apos;sharedang2dcm&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38:89</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="9b9d6c0d-3467-4ee5-a0d2-00af576412e7">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Calculate DCM &amp; Euler Angles/Rotation Angles to Direction Cosine Matrix/Create 3x3 Matrix</blockPath>
+      <id>RCAM_sim1:38:89:357:57</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="7ca9745a-80c2-4b37-b434-e5d8aad2cae0">
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38:89:357</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="977cca19-879c-431e-aeff-fa27d8b7010e">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Calculate omega_dot</blockPath>
+      <childrenIds>RCAM_sim1:38:90:350</childrenIds>
+      <id>RCAM_sim1:38:90</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="a32f37aa-a646-4129-95e2-27fd2981bd6f">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="871692b0-0c98-4fa9-91d8-494e685105a5">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="b314daad-d230-4f9d-9ef5-1b3f3f7e4d74">
+            <name>aMode</name>
+            <value></value>
+            <workspace>RCAM_sim1:38</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="d927abfa-c76c-4a29-98cc-0e8829813202">
+      <blockPath>RCAM_sim1/RCAM/EOM&amp;Environment/6DOF (Euler Angles)/Calculate omega_dot/3x3 Cross Product</blockPath>
+      <id>RCAM_sim1:38:90:350</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="3b3abf29-ade1-4032-9206-9256cfaeb962">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="935b5e2a-83fb-449a-84fa-0e52971945fd">
+          <evaluate>true</evaluate>
+          <expression>aMode</expression>
+          <name>aMode</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="17d84fc7-489a-4007-84c6-f902c4000c26">
+            <name>aMode</name>
+            <value></value>
+            <workspace>RCAM_sim1:38:90</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RCAM_sim1:38:90</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="aaefc370-41e7-4201-b05b-08bd4390d94f">
+      <blockPath>RCAM_sim1/Scopes&amp;Output/xdot/Subsystem/Create 3x3 Matrix</blockPath>
+      <id>RCAM_sim1:507</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="1c7098fd-9fb3-4ad5-90f8-0df12b265e85">
+        <initializationCode>if aerosharedtest(gcb)
+    aerosharedicon(&apos;shared&apos;);
+else
+    sharedautoicon(&apos;shared&apos;);
+end</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="821ae857-a360-4d7a-8af9-59e30cd3740e">
+      <childrenIds>RCAM_sim1:213</childrenIds>
+      <childrenIds>RCAM_sim1:37</childrenIds>
+      <childrenIds>RCAM_sim1:38</childrenIds>
+      <childrenIds>RCAM_sim1:507</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="b312e214-8b79-48db-8485-5da79af7a6a5">
+      <name>Ib</name>
+      <value>AAFJTQAAAAAOAAAAeAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAADAAAAAQAAAAAAAAAJAAAASAAAAAAAAAC0V1JBAAAAAAAAAAD/////H6YOwQAAAAAAAAAAAAAAAABMXUEAAAAAAAAAAP////8fpg7BAAAAAAAAAAAAAAAAsN5mQQ==</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="932efc35-6724-4b63-8638-60f32a78a550">
+      <name>Vb0</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAABAAAAAQAAAAAAAAAJAAAAGAAAAAAAAAAAQFVAAAAAAAAAAAAAAAAAAAAAAA==</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="030cfd15-31ea-4e83-8319-03338cd3497e">
+      <name>Xe0</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAABAAAAAQAAAAAAAAAJAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECPwA==</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="84e8b66c-fa23-49f7-b852-7f68cd0d5b83">
+      <name>euler0</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAABAAAAAQAAAAAAAAAJAAAAGAAAAAAAAAAAAAAA1ut78+nOuj8AAAAAAAAAAA==</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="9e05e49b-2c3f-4ae0-a50d-7d3e502ea749">
+      <name>m</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAATP1A</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="c91074d2-7c85-4b6a-aa4f-a9df6f861ce6">
+      <name>pqr0</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAABAAAAAQAAAAAAAAAJAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <flags type="slsa.mm.maskTree.MaskTreeFlags" uuid="a5bfb51f-85a5-407d-a359-29f294de4a29"/>
+  </slsa.mm.maskTree.MaskTree>
+</MF0>
