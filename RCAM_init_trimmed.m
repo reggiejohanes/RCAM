@@ -2,7 +2,7 @@
 t_sim = 480;
 
 % load RCAM_trim1_res.mat xstar ustar
-load RCAM_trim1v2_res.mat xstar ustar
+load RCAM_trim2_res.mat xstar ustar
 
 u0     = ustar;
 Vb0    = xstar(1:3);
