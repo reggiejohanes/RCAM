@@ -16,7 +16,7 @@ reggiejohanes@student.tudelft.nl
 >> FILES:
 
 1) RCAM_sim.slx        : [RUN HERE] Main model file
-		         	- Change initialization function callback string to run independently/for trimming
+		           ↳ Change initialization function callback string to run independently/for trimming
 2) RCAM_init.m         : Initialization function which defines untrimmed initial conditions
 3) RCAM_init_trimmed.m : Initialization function which uses trimmed initial conditions (loads trim results)
 4) RCAM_constants.m    : Initialization function which defines vehicle & environment constants
@@ -24,11 +24,13 @@ reggiejohanes@student.tudelft.nl
 
 6) RCAM_dynamics.m     : Wrapper file which allows simulink model to be run as .m function. Input: states & controls, output: accelerations.
 
-7) RCAM_trim1.m        : [RUN HERE] Trim script with FMINCON for case 1: steady level flight, all states & controls included in decision variable vector
+7) RCAM_trim1.m        : [RUN HERE] Trim script with FMINCON for case 1:
+			   ↳ Steady level flight, all states & controls included in decision variable vector
 8) RCAM_trim1_obj.m    : Objective function for case 1
 9) RCAM_trim1_res.mat  : Results from case 1
 
-10) RCAM_trim2.m       : [RUN HERE] Trim script with FMINCON for case 2: steady level flight, reduced decision variable vector
+10) RCAM_trim2.m       : [RUN HERE] Trim script with FMINCON for case 2:
+			   ↳ Steady level flight, reduced decision variable vector
 11) RCAM_trim2_obj.m   : Objective function for case 2
 12) RCAM_trim2_res.mat : Results from case 2
 
