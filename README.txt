@@ -10,8 +10,7 @@ reggiejohanes@student.tudelft.nl
 
 > Older version of this document available at https://garteur.org/wp-content/reports/FM/FM_AG-08_TP-088-3.pdf
 
-> Alternative document: Magni, J., Bennani, S. (1997). Robust Flight Control: A Design Challenge. Germany: Springer Berlin Heidelberg. ISBN 3540761519 (Chapter 14: The RCAM Design Challenge
-Problem Description)
+> Alternative document: Magni, J., Bennani, S. (1997). Robust Flight Control: A Design Challenge. Germany: Springer Berlin Heidelberg. ISBN 3540761519 (Chapter 14: The RCAM Design Challenge Problem Description)
 
 
 >> FILES:
