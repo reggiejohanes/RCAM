@@ -34,7 +34,7 @@ pqr0   = deg2rad(pqr0);
 u0     = deg2rad(u0);
 x0     = [Vb0;pqr0;euler0;Xe0];
 
-init = 0;  % 0 = start from initial guess
+init = 1;  % 0 = start from initial guess
            % 1 = use saved values from last run
 
 if init==0
@@ -121,7 +121,7 @@ options.OutputFcn     = @outputFcn_global;
 % Run optimization --------------------------------------------------------
 
 tic
-[zstar,fval,exitflag,output] = fmincon(@(x) obj_xdot0(x),z0,[],[],[],[],lb,ub,[],options);
+[zstar,fval,exitflag,output] = fmincon(@(x) RCAM_trim1_obj(x),z0,[],[],[],[],lb,ub,[],options);
 t_fmincon=toc;
 
 fprintf('<strong><< OPTIMIZATION COMPLETE >></strong>');

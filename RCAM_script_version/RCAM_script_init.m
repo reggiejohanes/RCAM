@@ -28,7 +28,7 @@ TF = 300;
 
 %% Run Model
 
-res=sim('RCAM_sim0.slx');
+res=sim('RCAM_script_sim.slx');
 
 %% Plot Results
 t=res.tout;

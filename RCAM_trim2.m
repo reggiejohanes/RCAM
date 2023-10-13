@@ -24,13 +24,13 @@ x0 = [Va_target;   % u [m/s]
 u0 = [deg2rad(0);    % Stabilizer deflection [deg]
       deg2rad(0.5)]; % Throttle - engine 1&2 [deg]
 
-init = 0;  % 0 = start from initial guess
+init = 1;  % 0 = start from initial guess
            % 1 = use saved values from last run
 
 if init==0
     z0 = [x0;u0];
 else
-    load RCAM_trim1v2_res zstar
+    load RCAM_trim2_res zstar
     z0 = zstar;
 end
 
@@ -87,7 +87,7 @@ options.OutputFcn     = @outputFcn_global;
 % Run optimization --------------------------------------------------------
 
 tic
-[zstar,fval,exitflag,output] = fmincon(@(x) obj_xdot0v2(x),z0,[],[],[],[],lb,ub,[],options);
+[zstar,fval,exitflag,output] = fmincon(@(x) RCAM_trim2_obj(x),z0,[],[],[],[],lb,ub,[],options);
 t_fmincon=toc;
 
 fprintf('<strong><< OPTIMIZATION COMPLETE >></strong>');
@@ -184,5 +184,5 @@ disp('<strong>> Table 3 - Accelerations</strong>')
 disp(xdottable0)
 
 % Save results ------------------------------------------------------------
-save RCAM_trim1v2_res zstar xstar ustar
+save RCAM_trim2_res zstar xstar ustar
 

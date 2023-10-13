@@ -1,4 +1,4 @@
-function [Xdot] = RCAM_model0(X,U)
+function [Xdot] = RCAM_script_dynamics(X,U)
 
 % Testing
 % clc

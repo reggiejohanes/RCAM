@@ -1,4 +1,4 @@
-function f0=obj_xdot0v2(z)
+function f0=RCAM_trim2_obj(z)
 
 global target
 Va_target    = target.Va;

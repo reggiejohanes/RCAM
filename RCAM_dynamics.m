@@ -26,10 +26,10 @@ euler0 = x(7:9);
 Xe0    = x(10:12);
 
 t_sim  = 0;
-% res    = sim("RCAM_sim1.slx",'SrcWorkspace','current',...
+% res    = sim("RCAM_sim.slx",'SrcWorkspace','current',...
 %                 'SimulationMode','rapid', ...
 %                 'RapidAcceleratorUpToDateCheck','off');
-res    = sim("RCAM_sim1.slx",'SrcWorkspace','current');
+res    = sim("RCAM_sim.slx",'SrcWorkspace','current');
 xdot   = res.xdot';
 
 end
