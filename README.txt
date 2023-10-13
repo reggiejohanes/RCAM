@@ -38,7 +38,7 @@ Problem Description)
 
 >> SCRIPT VERSION FILES:
 
-1) RCAM_script_init.m     : [RUN HERE] Runs simulink file with specified initial conditions & run time
+1) RCAM_script_run.m      : [RUN HERE] Runs simulink file with specified initial conditions & run time
 1) RCAM_script_dynamics.m : Dynamics model in script form. Input: states & controls, output: accelerations
 1) RCAM_script_sim.slx    : Simulink simulation file which calls dynamics .m file
 
