@@ -24,7 +24,7 @@ x0 = [Va_target;   % u [m/s]
 u0 = [deg2rad(0);    % Stabilizer deflection [deg]
       deg2rad(0.5)]; % Throttle - engine 1&2 [deg]
 
-init = 1;  % 0 = start from initial guess
+init = 0;  % 0 = start from initial guess
            % 1 = use saved values from last run
 
 if init==0

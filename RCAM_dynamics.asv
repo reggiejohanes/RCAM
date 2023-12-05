@@ -15,9 +15,10 @@ function xdot=RCAM_dynamics(x,u)
 %      ze];   12
 % u = [dAil;  13
 %      dStab; 14
-%      dRud;  15
-%      Thr1;  16
-%      Thr2]; 17
+%      dRub;  15
+%      HTU;  16
+%      DEP_col;
+%      DEP_slp]; 17
 
 u0     = u;
 Vb0    = x(1:3);
